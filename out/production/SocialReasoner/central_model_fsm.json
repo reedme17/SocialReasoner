@@ -1,0 +1,2461 @@
+{
+  "states": {
+    "start_greeting": {
+      "phase": "phase_greetings",
+      "systemUtterance": "Start Conversation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "greeting",
+          "intention": "start_greeting"
+        }
+      ]
+    },
+    "greeting": {
+      "phase": "phase_greetings",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "pleasure_coming_together",
+          "intention": "self_naming"
+        }
+      ]
+    },
+    "pleasure_coming_together": {
+      "phase": "phase_greetings",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "introduce",
+          "intention": "pleasure_coming_together"
+        }
+      ]
+    },
+    "introduce": {
+      "phase": "phase_introductions",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_attendance_elicitation",
+          "intention": "introduce"
+        }
+      ]
+    },
+    "start_attendance_elicitation": {
+      "phase": "phase_introductions",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_attendance_elicitation",
+          "intention": "start_attendance_elicitation"
+        }
+      ]
+    },
+    "do_attendance_elicitation": {
+      "phase": "phase_introductions",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_attendance_elicitation_first",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_attendance_elicitation_not_first",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_attendance_elicitation_first": {
+      "phase": "phase_introductions",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_goal_elicitation",
+          "intention": "feedback_attendance_elicitation_first"
+        }
+      ]
+    },
+    "feedback_attendance_elicitation_not_first": {
+      "phase": "phase_introductions",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_goal_elicitation",
+          "intention": "feedback_attendance_elicitation_not_first"
+        }
+      ]
+    },
+    "start_goal_elicitation": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_goal_elicitation",
+          "intention": "start_goal_elicitation"
+        }
+      ]
+    },
+    "do_goal_elicitation": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_goal_elicitation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "feedback_goal_elicitation_multiple_goal",
+          "intention": "multiple_goals"
+        },
+        {
+          "state": "feedback_present_work",
+          "intention": "present_work"
+        },
+        {
+          "state": "do_goal_elicitation_by_interest",
+          "intention": "work_interest"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "goal_not_identified"
+        }
+      ]
+    },
+    "do_goal_elicitation_by_interest": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_goal_elicitation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "feedback_goal_elicitation_multiple_goal",
+          "intention": "multiple_goals"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "present_work"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "work_interest"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "goal_not_identified"
+        }
+      ]
+    },
+    "feedback_goal_elicitation_1_goal": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_node_person_recommendation_1_goal",
+          "intention": "feedback_goal_elicitation_1_goal"
+        },
+        {
+          "state": "start_node_session_recommendation_1_goal",
+          "intention": "feedback_goal_elicitation_1_goal"
+        },
+        {
+          "state": "start_node_food_recommendation_1_goal",
+          "intention": "feedback_goal_elicitation_1_goal"
+        },
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "feedback_goal_elicitation_1_goal"
+        }
+      ]
+    },
+    "feedback_goal_elicitation_multiple_goal": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "feedback_goal_elicitation_multiple_goal"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "feedback_goal_elicitation_multiple_goal"
+        },
+        {
+          "state": "start_node_food_recommendation_multiple_goal",
+          "intention": "feedback_goal_elicitation_multiple_goal"
+        },
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "feedback_goal_elicitation_multiple_goal"
+        }
+      ]
+    },
+    "feedback_goal_not_identified": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_goal_elicitation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "feedback_goal_elicitation_multiple_goal",
+          "intention": "multiple_goals"
+        }
+      ]
+    },
+    "feedback_present_work": {
+      "phase": "phase_goal_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_goal_elicitation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "feedback_goal_elicitation_multiple_goal",
+          "intention": "multiple_goals"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "work_interest"
+        },
+        {
+          "state": "feedback_goal_not_identified",
+          "intention": "goal_not_identified"
+        }
+      ]
+    },
+    "start_node_person_recommendation_1_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_person_recommendation_1_goal",
+          "intention": "start_node_person_recommendation_1_goal"
+        }
+      ]
+    },
+    "internal_decider_interest_elicitation_person_recommendation_1_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_interest_elicitation_person_recommendation_1_goal_",
+          "intention": "internal_decider_interest_elicitation_person_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_person_recommendation_1_goal_1st_time",
+          "intention": "internal_decider_interest_elicitation_person_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_interest_elicitation_person_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_interest_elicitation_person_recommendation_1_goal_",
+          "intention": "start_interest_elicitation_person_recommendation_1_goal_"
+        }
+      ]
+    },
+    "do_interest_elicitation_person_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1p",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_1_goal_",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_interest_elicitation_person_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_1_goal_1st_time",
+          "intention": "feedback_interest_elicitation_person_recommendation_1_goal_"
+        }
+      ]
+    },
+    "start_person_recommendation_1_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_person_recommendation_1_goal_1st_time",
+          "intention": "start_person_recommendation_1_goal_1st_time"
+        }
+      ]
+    },
+    "do_person_recommendation_1_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_1_goal_1st_time",
+          "intention": "do_person_recommendation_1_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_1_goal_1st_time_default",
+          "intention": "do_person_recommendation_1_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_1st_time",
+          "intention": "outcome_person_recommendation_1_goal_1st_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_1st_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_1st_time",
+          "intention": "outcome_person_recommendation_1_goal_1st_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_1_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_1_goal_1st_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_1_goal_1st_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_1st_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_1_goal_2nd_time_if_prior_feedback_yes",
+          "intention": "feedback_person_recommendation_1_goal_1st_time_yes"
+        }
+      ]
+    },
+    "start_person_recommendation_1_goal_2nd_time_if_prior_feedback_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_person_recommendation_1_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_start_person_recommendation_1_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_2nd_time",
+          "intention": "work_interest"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_2nd_time",
+          "intention": "request_person_recommendation"
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_1_goal_2nd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1p",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_2nd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_1_goal_2nd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_1_goal",
+          "intention": "feedback_start_person_recommendation_1_goal_2nd_time_no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_1st_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_1_goal_2nd_time_if_prior_feedback_no",
+          "intention": "feedback_person_recommendation_1_goal_1st_time_no"
+        }
+      ]
+    },
+    "start_person_recommendation_1_goal_2nd_time_if_prior_feedback_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1p",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_2nd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_person_recommendation_1_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_1_goal_2nd_time",
+          "intention": "do_person_recommendation_1_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_1_goal_2nd_time_default",
+          "intention": "do_person_recommendation_1_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_2nd_time",
+          "intention": "outcome_person_recommendation_1_goal_2nd_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_2nd_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_2nd_time",
+          "intention": "outcome_person_recommendation_1_goal_2nd_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_1_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_1_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_1_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_2nd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_1_goal_3rd_time_if_prior_feedback_yes",
+          "intention": "feedback_person_recommendation_1_goal_2nd_time_yes"
+        }
+      ]
+    },
+    "start_person_recommendation_1_goal_3rd_time_if_prior_feedback_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_person_recommendation_1_goal_3rd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_start_person_recommendation_1_goal_3rd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "work_interest"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "request_person_recommendation"
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_1_goal_3rd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1p",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_1_goal_3rd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_1_goal",
+          "intention": "feedback_start_person_recommendation_1_goal_3rd_time_no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_2nd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_1_goal_3rd_time_if_prior_feedback_no",
+          "intention": "feedback_person_recommendation_1_goal_2nd_time_no"
+        }
+      ]
+    },
+    "start_person_recommendation_1_goal_3rd_time_if_prior_feedback_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "work_interest"
+        },
+        {
+          "state": "system_dont_understand_1p",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_person_recommendation_1_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_1_goal_3rd_time",
+          "intention": "do_person_recommendation_1_goal_3rd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_1_goal_3rd_time_default",
+          "intention": "do_person_recommendation_1_goal_3rd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_3rd_time",
+          "intention": "outcome_person_recommendation_1_goal_3rd_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_1_goal_3rd_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_1_goal_3rd_time",
+          "intention": "outcome_person_recommendation_1_goal_3rd_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_1_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_1_goal_3rd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_1_goal_3rd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_3rd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_1_goal",
+          "intention": "feedback_person_recommendation_1_goal_3rd_time_yes"
+        }
+      ]
+    },
+    "feedback_person_recommendation_1_goal_3rd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_1_goal",
+          "intention": "feedback_person_recommendation_1_goal_3rd_time_no"
+        }
+      ]
+    },
+    "exit_node_person_recommendation_1_goal": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "internalValidation": true,
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_person_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_person_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_person_recommendation_1_goal"
+        }
+      ]
+    },
+    "start_node_person_recommendation_multiple_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_person_recommendation_multiple_goal",
+          "intention": "start_node_person_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "internal_decider_interest_elicitation_person_recommendation_multiple_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_interest_elicitation_person_recommendation_multiple_goal_",
+          "intention": "internal_decider_interest_elicitation_person_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_person_recommendation_multiple_goal_1st_time",
+          "intention": "internal_decider_interest_elicitation_person_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_interest_elicitation_person_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_interest_elicitation_person_recommendation_multiple_goal_",
+          "intention": "start_interest_elicitation_person_recommendation_multiple_goal_"
+        }
+      ]
+    },
+    "do_interest_elicitation_person_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_mp",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_multiple_goal_",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_interest_elicitation_person_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_multiple_goal_1st_time",
+          "intention": "feedback_interest_elicitation_person_recommendation_multiple_goal_"
+        }
+      ]
+    },
+    "start_person_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_person_recommendation_multiple_goal_1st_time",
+          "intention": "start_person_recommendation_multiple_goal_1st_time"
+        }
+      ]
+    },
+    "do_person_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_multiple_goal_1st_time",
+          "intention": "do_person_recommendation_multiple_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_multiple_goal_1st_time_default",
+          "intention": "do_person_recommendation_multiple_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_1st_time",
+          "intention": "outcome_person_recommendation_multiple_goal_1st_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_1st_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_1st_time",
+          "intention": "outcome_person_recommendation_multiple_goal_1st_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_multiple_goal_1st_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_multiple_goal_1st_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_1st_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_multiple_goal_2nd_time_if_prior_feedback_yes",
+          "intention": "feedback_person_recommendation_multiple_goal_1st_time_yes"
+        }
+      ]
+    },
+    "start_person_recommendation_multiple_goal_2nd_time_if_prior_feedback_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_person_recommendation_multiple_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_start_person_recommendation_multiple_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "work_interest"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "request_person_recommendation"
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_multiple_goal_2nd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_mp",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_multiple_goal_2nd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_multiple_goal_2nd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_multiple_goal",
+          "intention": "feedback_start_person_recommendation_multiple_goal_2nd_time_no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_1st_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_multiple_goal_2nd_time_if_prior_feedback_no",
+          "intention": "feedback_person_recommendation_multiple_goal_1st_time_no"
+        }
+      ]
+    },
+    "start_person_recommendation_multiple_goal_2nd_time_if_prior_feedback_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_mp",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_multiple_goal_2nd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_person_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_multiple_goal_2nd_time",
+          "intention": "do_person_recommendation_multiple_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_multiple_goal_2nd_time_default",
+          "intention": "do_person_recommendation_multiple_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_2nd_time",
+          "intention": "outcome_person_recommendation_multiple_goal_2nd_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_2nd_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_2nd_time",
+          "intention": "outcome_person_recommendation_multiple_goal_2nd_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_multiple_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_multiple_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_2nd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_multiple_goal_3rd_time_if_prior_feedback_yes",
+          "intention": "feedback_person_recommendation_multiple_goal_2nd_time_yes"
+        }
+      ]
+    },
+    "start_person_recommendation_multiple_goal_3rd_time_if_prior_feedback_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_person_recommendation_multiple_goal_3rd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_start_person_recommendation_multiple_goal_3rd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "work_interest"
+        },
+        {
+          "state": "do_person_recommendation_1_goal_3rd_time",
+          "intention": "request_person_recommendation"
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_multiple_goal_3rd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_mp",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_multiple_goal_3rd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_start_person_recommendation_multiple_goal_3rd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_multiple_goal",
+          "intention": "feedback_start_person_recommendation_multiple_goal_3rd_time_no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_2nd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_multiple_goal_3rd_time_if_prior_feedback_no",
+          "intention": "feedback_person_recommendation_multiple_goal_2nd_time_no"
+        }
+      ]
+    },
+    "start_person_recommendation_multiple_goal_3rd_time_if_prior_feedback_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_mp",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_person_recommendation_multiple_goal_3rd_time",
+          "intention": "request_person_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_person_recommendation_multiple_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_person_recommendation_multiple_goal_3rd_time",
+          "intention": "do_person_recommendation_multiple_goal_3rd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_person_recommendation_multiple_goal_3rd_time_default",
+          "intention": "do_person_recommendation_multiple_goal_3rd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_3rd_time",
+          "intention": "outcome_person_recommendation_multiple_goal_3rd_time",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_person_recommendation_multiple_goal_3rd_time_default": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_person_recommendation_multiple_goal_3rd_time",
+          "intention": "outcome_person_recommendation_multiple_goal_3rd_time_default",
+          "operation": "set",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_person_recommendation_multiple_goal_3rd_time": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_person_recommendation_multiple_goal_3rd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_person_recommendation_multiple_goal_3rd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_3rd_time_yes": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_multiple_goal",
+          "intention": "feedback_person_recommendation_multiple_goal_3rd_time_yes"
+        }
+      ]
+    },
+    "feedback_person_recommendation_multiple_goal_3rd_time_no": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_person_recommendation_multiple_goal",
+          "intention": "feedback_person_recommendation_multiple_goal_3rd_time_no"
+        }
+      ]
+    },
+    "exit_node_person_recommendation_multiple_goal": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "internalValidation": true,
+      "nextTransitionsStates": [
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_people"
+        },
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_person"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_session"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_session_detail"
+        },
+        {
+          "state": "start_node_food_recommendation_multiple_goal",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_food"
+        },
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_person_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_person_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "start_node_session_recommendation_1_goal": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "internalValidation": true,
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_session_recommendation_1_goal",
+          "intention": "start_node_session_recommendation_1_goal"
+        }
+      ]
+    },
+    "internal_decider_interest_elicitation_session_recommendation_1_goal": {
+      "phase": "phase_session_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "internal_decider_interest_elicitation_session_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_session_recommendation_1_goal_1st_time",
+          "intention": "internal_decider_interest_elicitation_session_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_interest_elicitation_session_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "start_interest_elicitation_session_recommendation_1_goal_"
+        }
+      ]
+    },
+    "do_interest_elicitation_session_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1s",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_interest_elicitation_session_recommendation_1_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_1_goal_1st_time",
+          "intention": "feedback_interest_elicitation_session_recommendation_1_goal_"
+        }
+      ]
+    },
+    "start_session_recommendation_1_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_session_recommendation_1_goal_1st_time",
+          "intention": "start_session_recommendation_1_goal_1st_time"
+        }
+      ]
+    },
+    "do_session_recommendation_1_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_session_recommendation_1_goal_1st_time",
+          "intention": "do_session_recommendation_1_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_session_recommendation_1_goal_1st_time_default",
+          "intention": "do_session_recommendation_1_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_1_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_1_goal_1st_time",
+          "intention": "outcome_session_recommendation_1_goal_1st_time",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_1_goal_1st_time_default": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_1_goal_1st_time",
+          "intention": "outcome_session_recommendation_1_goal_1st_time_default",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_session_recommendation_1_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_session_recommendation_1_goal_1st_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_session_recommendation_1_goal_1st_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_1_goal_1st_time_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_1_goal_2nd_time_if_prior_feedback_no",
+          "intention": "feedback_session_recommendation_1_goal_1st_time_no"
+        }
+      ]
+    },
+    "start_session_recommendation_1_goal_2nd_time_if_prior_feedback_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1s",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_session_recommendation_1_goal_2nd_time",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_session_recommendation_1_goal_1st_time_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_1_goal_2nd_time_if_prior_feedback_yes",
+          "intention": "feedback_session_recommendation_1_goal_1st_time_yes"
+        }
+      ]
+    },
+    "start_session_recommendation_1_goal_2nd_time_if_prior_feedback_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_1s",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_session_recommendation_1_goal_2nd_time",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_session_recommendation_1_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_session_recommendation_1_goal_2nd_time",
+          "intention": "do_session_recommendation_1_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_session_recommendation_1_goal_2nd_time_default",
+          "intention": "do_session_recommendation_1_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_1_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_1_goal_2nd_time",
+          "intention": "outcome_session_recommendation_1_goal_2nd_time",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_1_goal_2nd_time_default": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_1_goal_2nd_time",
+          "intention": "outcome_session_recommendation_1_goal_2nd_time_default",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_session_recommendation_1_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_session_recommendation_1_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_session_recommendation_1_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_1_goal_2nd_time_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_session_recommendation_1_goal",
+          "intention": "feedback_session_recommendation_1_goal_2nd_time_no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_1_goal_2nd_time_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_session_recommendation_1_goal",
+          "intention": "feedback_session_recommendation_1_goal_2nd_time_yes"
+        }
+      ]
+    },
+    "exit_node_session_recommendation_1_goal": {
+      "phase": "phase_session_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_session_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_session_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_session_recommendation_1_goal"
+        }
+      ]
+    },
+    "start_node_session_recommendation_multiple_goal": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "system_intent",
+      "internalValidation": true,
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_session_recommendation_multiple_goal",
+          "intention": "start_node_session_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "internal_decider_interest_elicitation_session_recommendation_multiple_goal": {
+      "phase": "phase_session_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "internal_decider_interest_elicitation_session_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_session_recommendation_multiple_goal_1st_time",
+          "intention": "internal_decider_interest_elicitation_session_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_interest_elicitation_session_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "start_interest_elicitation_session_recommendation_multiple_goal_"
+        }
+      ]
+    },
+    "do_interest_elicitation_session_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_ms",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_interest_elicitation_session_recommendation_multiple_goal_": {
+      "phase": "phase_interests_elicitation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_multiple_goal_1st_time",
+          "intention": "feedback_interest_elicitation_session_recommendation_multiple_goal_"
+        }
+      ]
+    },
+    "start_session_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_session_recommendation_multiple_goal_1st_time",
+          "intention": "start_session_recommendation_multiple_goal_1st_time"
+        }
+      ]
+    },
+    "do_session_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_session_recommendation_multiple_goal_1st_time",
+          "intention": "do_session_recommendation_multiple_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_session_recommendation_multiple_goal_1st_time_default",
+          "intention": "do_session_recommendation_multiple_goal_1st_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_multiple_goal_1st_time",
+          "intention": "outcome_session_recommendation_multiple_goal_1st_time",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_multiple_goal_1st_time_default": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_multiple_goal_1st_time",
+          "intention": "outcome_session_recommendation_multiple_goal_1st_time_default",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_session_recommendation_multiple_goal_1st_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_session_recommendation_multiple_goal_1st_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_session_recommendation_multiple_goal_1st_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_multiple_goal_1st_time_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_multiple_goal_2nd_time_if_prior_feedback_no",
+          "intention": "feedback_session_recommendation_multiple_goal_1st_time_no"
+        }
+      ]
+    },
+    "start_session_recommendation_multiple_goal_2nd_time_if_prior_feedback_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_ms",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_session_recommendation_multiple_goal_2nd_time",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "feedback_session_recommendation_multiple_goal_1st_time_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_session_recommendation_multiple_goal_2nd_time_if_prior_feedback_yes",
+          "intention": "feedback_session_recommendation_multiple_goal_1st_time_yes"
+        }
+      ]
+    },
+    "start_session_recommendation_multiple_goal_2nd_time_if_prior_feedback_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "system_dont_understand_ms",
+          "intention": "dont_understand"
+        },
+        {
+          "state": "do_session_recommendation_multiple_goal_2nd_time",
+          "intention": "request_session_recommendation",
+          "operation": "set",
+          "varName": "is_work_elicitation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "do_session_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_session_recommendation_multiple_goal_2nd_time",
+          "intention": "do_session_recommendation_multiple_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": false
+        },
+        {
+          "state": "outcome_session_recommendation_multiple_goal_2nd_time_default",
+          "intention": "do_session_recommendation_multiple_goal_2nd_time",
+          "operation": "=",
+          "varName": "is_keyword_null",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_multiple_goal_2nd_time",
+          "intention": "outcome_session_recommendation_multiple_goal_2nd_time",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "outcome_session_recommendation_multiple_goal_2nd_time_default": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_session_recommendation_multiple_goal_2nd_time",
+          "intention": "outcome_session_recommendation_multiple_goal_2nd_time_default",
+          "operation": "set",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_session_recommendation_multiple_goal_2nd_time": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_session_recommendation_multiple_goal_2nd_time_yes",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "feedback_session_recommendation_multiple_goal_2nd_time_no",
+          "intention": "negative_confirmation"
+        },
+        {
+          "state": "system_ask_for_yes/no",
+          "intention": "ask_for_yes/no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_multiple_goal_2nd_time_no": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_session_recommendation_multiple_goal",
+          "intention": "feedback_session_recommendation_multiple_goal_2nd_time_no"
+        }
+      ]
+    },
+    "feedback_session_recommendation_multiple_goal_2nd_time_yes": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_session_recommendation_multiple_goal",
+          "intention": "feedback_session_recommendation_multiple_goal_2nd_time_yes"
+        }
+      ]
+    },
+    "exit_node_session_recommendation_multiple_goal": {
+      "phase": "phase_session_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_people"
+        },
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_person"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_session"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_session_detail"
+        },
+        {
+          "state": "start_node_food_recommendation_multiple_goal",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_food"
+        },
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_session_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_session_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "start_node_food_recommendation_1_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_food_recommendation_1_goal",
+          "intention": "start_node_food_recommendation_1_goal"
+        }
+      ]
+    },
+    "start_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_food_recommendation_1_goal",
+          "intention": "start_food_recommendation_1_goal"
+        }
+      ]
+    },
+    "feedback_start_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_food_recommendation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "do_food_recommendation_1_goal",
+          "intention": "request_food_recommendation"
+        }
+      ]
+    },
+    "do_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_food_recommendation_1_goal",
+          "intention": "do_food_recommendation_1_goal"
+        }
+      ]
+    },
+    "outcome_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_food_recommendation_1_goal",
+          "intention": "outcome_food_recommendation_1_goal",
+          "operation": "set",
+          "varName": "is_food_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_food_recommendation_1_goal",
+          "intention": "positive_confirmation"
+        }
+      ]
+    },
+    "feedback_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_food_recommendation_1_goal",
+          "intention": "feedback_food_recommendation_1_goal"
+        }
+      ]
+    },
+    "exit_node_food_recommendation_1_goal": {
+      "phase": "phase_food_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_food_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_food_recommendation_1_goal",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_food_recommendation_1_goal"
+        }
+      ]
+    },
+    "start_node_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_food_recommendation_multiple_goal",
+          "intention": "start_node_food_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "start_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_start_food_recommendation_multiple_goal",
+          "intention": "start_food_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "feedback_start_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "do_food_recommendation_multiple_goal",
+          "intention": "request_food_recommendation"
+        }
+      ]
+    },
+    "do_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "outcome_food_recommendation_multiple_goal",
+          "intention": "do_food_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "outcome_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "elicit_feedback_food_recommendation_multiple_goal",
+          "intention": "outcome_food_recommendation_multiple_goal",
+          "operation": "set",
+          "varName": "is_food_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "elicit_feedback_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_food_recommendation_multiple_goal",
+          "intention": "positive_confirmation"
+        }
+      ]
+    },
+    "feedback_food_recommendation_multiple_goal": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "exit_node_food_recommendation_multiple_goal",
+          "intention": "feedback_food_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "exit_node_food_recommendation_multiple_goal": {
+      "phase": "phase_person_recommendation",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_people"
+        },
+        {
+          "state": "start_node_person_recommendation_multiple_goal",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_person"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_session"
+        },
+        {
+          "state": "start_node_session_recommendation_multiple_goal",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "find_session_detail"
+        },
+        {
+          "state": "start_node_food_recommendation_multiple_goal",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "equals",
+          "varName": "next_goal",
+          "varValue": "recommend_food"
+        },
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "exit_node_food_recommendation_multiple_goal",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "exit_node_food_recommendation_multiple_goal"
+        }
+      ]
+    },
+    "start_session_recommendation_not_1st_time_request_no_continuation": {
+      "phase": "phase_session_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_session_recommendation_1_goal",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_person_recommendation_not_1st_time_request_no_continuation": {
+      "phase": "phase_person_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "internal_decider_interest_elicitation_person_recommendation_1_goal",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_food_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_food_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "start_food_recommendation_not_1st_time_request_no_continuation": {
+      "phase": "phase_food_recommendation",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "start_food_recommendation_1_goal",
+          "intention": "positive_confirmation"
+        },
+        {
+          "state": "do_food_recommendation_1_goal",
+          "intention": "request_food_recommendation"
+        },
+        {
+          "state": "start_person_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_person_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "start_session_recommendation_not_1st_time_request_no_continuation",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": false
+        },
+        {
+          "state": "pre_closing",
+          "intention": "negative_confirmation",
+          "operation": "=",
+          "varName": "is_session_recommendation_covered",
+          "varValue": true
+        }
+      ]
+    },
+    "pre_closing": {
+      "phase": "phase_farewell",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_goal_elicitation_1_goal",
+          "intention": "1_goal"
+        },
+        {
+          "state": "farewell",
+          "intention": "farewell"
+        }
+      ]
+    },
+    "farewell": {
+      "phase": "phase_farewell",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "half_real_farewell",
+          "intention": "farewell"
+        }
+      ]
+    },
+    "half_real_farewell": {
+      "phase": "phase_farewell",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "real_farewell",
+          "intention": "farewell"
+        }
+      ]
+    },
+    "real_farewell": {
+      "phase": "phase_farewell",
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "reset",
+          "intention": "real_farewell"
+        }
+      ]
+    },
+    "match_any_intent": {
+      "phase": "phase_any",
+      "systemUtterance": "",
+      "internalValidation": true,
+      "typeNextIntent": "system_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "any",
+          "intention": "any"
+        }
+      ]
+    },
+    "backup_word": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you yes or no?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "any",
+          "intention": "any"
+        }
+      ]
+    },
+    "system_ask_for_yes/no": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you yes or no?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "any",
+          "intention": "any"
+        }
+      ]
+    },
+    "system_dont_understand_1p": {
+      "phase": "phase_any",
+      "systemUtterance": "Sorry, I didn't understand. Could you say it again?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_1_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_dont_understand_mp": {
+      "phase": "phase_any",
+      "systemUtterance": "Sorry, I didn't understand. Could you say it again?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_multiple_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_dont_understand_1s": {
+      "phase": "phase_any",
+      "systemUtterance": "Sorry, I didn't understand. Could you say it again?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_dont_understand_ms": {
+      "phase": "phase_any",
+      "systemUtterance": "Sorry, I didn't understand. Could you say it again?",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_ask_for_confirmation_1p": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you mean",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_1_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_ask_for_confirmation_mp": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you mean",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_person_recommendation_multiple_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_ask_for_confirmation_1s": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you mean",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_1_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    },
+    "system_ask_for_confirmation_ms": {
+      "phase": "phase_any",
+      "systemUtterance": "Did you mean",
+      "typeNextIntent": "user_intent",
+      "nextTransitionsStates": [
+        {
+          "state": "feedback_interest_elicitation_session_recommendation_multiple_goal_",
+          "intention": "match_any_intent"
+        }
+      ]
+    }
+  },
+  "vars": [
+    [
+      "is_keyword_null",
+      "boolean",
+      false
+    ],
+    [
+      "is_work_elicitation_covered",
+      "boolean",
+      false
+    ],
+    [
+      "is_session_recommendation_covered",
+      "boolean",
+      false
+    ],
+    [
+      "is_person_recommendation_covered",
+      "boolean",
+      false
+    ],
+    [
+      "is_food_recommendation_covered",
+      "boolean",
+      false
+    ],
+    [
+      "is_party_recommendation_covered",
+      "boolean",
+      false
+    ],
+    [
+      "next_goal",
+      "string",
+      "no_goal"
+    ]
+  ],
+  "special_system_intents": [
+    "process_info_user_is_telling_goals",
+    "provide_intent_translate_goals_into_form_for_feedback",
+    "provide_intent_where_to_go_next"
+  ],
+  "phaseStates": [
+    [
+      "request_session_recommendation",
+      "start_recommendation_if_goal_attend_session"
+    ],
+    [
+      "request_person_recommendation",
+      "start_recommendation_if_goal_meet_people"
+    ],
+    [
+      "request_food_recommendation",
+      "start_food_recommendation"
+    ],
+    [
+      "farewell",
+      "pre_closing"
+    ]
+  ],
+  "scenarios": [],
+  "runScenario": false,
+  "initialUserConvStrat": "Self-Disclosure",
+  "initialRapportLevel": 4
+}

@@ -1,0 +1,8 @@
+System intent: greeting phase: phase_greetings strategy: [ASN, NONE, BC, PR, RSE, QESD, VSN, SD]
+User intent: self_naming
+System intent: pleasure_coming_together phase: phase_greetings strategy: [NONE, SD, QESD, PR, VSN, BC, ASN, RSE]
+System intent: introduce phase: phase_introductions strategy: [SD, QESD, PR, VSN, NONE, BC, ASN, RSE]
+System intent: start_attendance_elicitation phase: phase_introductions strategy: [NONE, QESD, PR, VSN, BC, ASN, RSE, SD]
+System intent: do_attendance_elicitation phase: phase_introductions strategy: [NONE, PR, QESD, VSN, SD, BC, ASN, RSE]
+User intent: farewell
+System intent: real_farewell phase: phase_farewell strategy: [NONE, QESD, VSN, PR, SD, BC, ASN, RSE]

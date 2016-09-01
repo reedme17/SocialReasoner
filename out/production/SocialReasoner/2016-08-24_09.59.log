@@ -1,0 +1,72 @@
+System intent: greeting phase: phase_greetings strategy: [ASN, NONE, BC, PR, RSE, QESD, VSN, SD]
+User intent: self_naming
+System intent: pleasure_coming_together phase: phase_greetings strategy: [NONE, PR, SD, VSN, QESD, BC, ASN, RSE]
+System intent: introduce phase: phase_introductions strategy: [SD, QESD, PR, VSN, NONE, BC, ASN, RSE]
+System intent: start_attendance_elicitation phase: phase_introductions strategy: [NONE, QESD, PR, VSN, BC, ASN, RSE, SD]
+System intent: do_attendance_elicitation phase: phase_introductions strategy: [NONE, PR, VSN, QESD, SD, BC, ASN, RSE]
+User intent: positive_confirmation
+System intent: feedback_attendance_elicitation_first phase: phase_introductions strategy: [NONE, QESD, PR, VSN, SD, BC, ASN, RSE]
+System intent: start_goal_elicitation phase: phase_goal_elicitation strategy: [QESD, PR, VSN, SD, NONE, BC, ASN, RSE]
+System intent: do_goal_elicitation phase: phase_goal_elicitation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: work_interest
+System intent: do_goal_elicitation_by_interest phase: phase_goal_elicitation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: 1_goal
+System intent: feedback_goal_elicitation_1_goal phase: phase_goal_elicitation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: start_node_person_recommendation_1_goal phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: internal_decider_interest_elicitation_person_recommendation_1_goal phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: start_interest_elicitation_person_recommendation_1_goal_ phase: phase_interests_elicitation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: do_interest_elicitation_person_recommendation_1_goal_ phase: phase_interests_elicitation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+User intent: work_interest
+System intent: feedback_interest_elicitation_person_recommendation_1_goal_ phase: phase_interests_elicitation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: start_person_recommendation_1_goal_1st_time phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: do_person_recommendation_1_goal_1st_time phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: outcome_person_recommendation_1_goal_1st_time phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_person_recommendation_1_goal_1st_time phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: feedback_person_recommendation_1_goal_1st_time_yes phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: start_person_recommendation_1_goal_2nd_time_if_prior_feedback_yes phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: feedback_start_person_recommendation_1_goal_2nd_time_yes phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+User intent: request_person_recommendation
+System intent: do_person_recommendation_1_goal_2nd_time phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: outcome_person_recommendation_1_goal_2nd_time phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_person_recommendation_1_goal_2nd_time phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: negative_confirmation
+System intent: feedback_person_recommendation_1_goal_2nd_time_no phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: start_person_recommendation_1_goal_3rd_time_if_prior_feedback_no phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: backup_word phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: do_person_recommendation_1_goal_3rd_time phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: outcome_person_recommendation_1_goal_3rd_time phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_person_recommendation_1_goal_3rd_time phase: phase_person_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+User intent: negative_confirmation
+System intent: feedback_person_recommendation_1_goal_3rd_time_no phase: phase_person_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: exit_node_person_recommendation_1_goal phase: phase_person_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: start_session_recommendation_not_1st_time_request_no_continuation phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: internal_decider_interest_elicitation_session_recommendation_1_goal phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: start_session_recommendation_1_goal_1st_time phase: phase_session_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: do_session_recommendation_1_goal_1st_time phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: outcome_session_recommendation_1_goal_1st_time phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_session_recommendation_1_goal_1st_time phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: feedback_session_recommendation_1_goal_1st_time_yes phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: start_session_recommendation_1_goal_2nd_time_if_prior_feedback_yes phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: request_session_recommendation
+System intent: do_session_recommendation_1_goal_2nd_time phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: outcome_session_recommendation_1_goal_2nd_time phase: phase_session_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_session_recommendation_1_goal_2nd_time phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: feedback_session_recommendation_1_goal_2nd_time_yes phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: start_session_recommendation_1_goal_3rd_time_if_prior_feedback_yes phase: phase_session_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+User intent: request_session_recommendation
+System intent: do_session_recommendation_1_goal_3rd_time phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: outcome_session_recommendation_1_goal_3rd_time phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+System intent: elicit_feedback_session_recommendation_1_goal_3rd_time phase: phase_session_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: positive_confirmation
+System intent: feedback_session_recommendation_1_goal_3rd_time_yes phase: phase_session_recommendation strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+System intent: exit_node_session_recommendation_1_goal phase: phase_session_recommendation strategy: [NONE, PR, VSN, SD, BC, ASN, RSE, QESD]
+System intent: start_food_recommendation_not_1st_time_request_no_continuation phase: phase_food_recommendation strategy: [NONE, VSN, PR, SD, BC, ASN, RSE, QESD]
+User intent: negative_confirmation
+System intent: pre_closing phase: phase_farewell strategy: [NONE, VSN, SD, PR, BC, ASN, RSE, QESD]
+User intent: farewell

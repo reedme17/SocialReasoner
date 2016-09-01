@@ -1,0 +1,5 @@
+System intent: greeting phase: phase_greetings strategy: [ASN, NONE, BC, PR, RSE, QESD, VSN, SD]
+User intent: farewell
+System intent: half_real_farewell phase: phase_farewell strategy: [PR, VSN, SD, ASN, NONE, BC, RSE, QESD]
+User intent: farewell
+System intent: real_farewell phase: phase_farewell strategy: [ASN, PR, SD, VSN, NONE, BC, RSE, QESD]
